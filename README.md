@@ -45,5 +45,3 @@ A special thanks to all the testers and contributors who have helped to improve 
 ---
 
 Enjoy the power of control over your media with Speed5!
-
-_Remember to replace placeholder text such as "[Your Name/Team]" with the actual information relevant to your project._
