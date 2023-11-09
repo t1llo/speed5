@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adjust HTML5 speed</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        padding: 20px;
+      }
+
+      .slidecontainer {
+        width: 300px; /* Adjust to fit your design */
+        margin: 0 auto; /* Center the slider */
+      }
+
+      /* Style the slider (track) */
+      .slidecontainer input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 6px;
+        border-radius: 3px;
+        background: #d3d3d3;
+        outline: none;
+        transition: background 0.3s ease-in-out;
+      }
+
+      /* Effects for the slider (thumb) */
+      .slidecontainer input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #4caf50;
+        cursor: pointer;
+        /* Smooth transition effect when thumb is moved */
+        transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
+
+      .slidecontainer input[type="range"]::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #4caf50;
+        cursor: pointer;
+        /* Smooth transition effect when thumb is moved */
+        transition: background 0.3s ease-in-out;
+      }
+
+      /* Slide handle on hover */
+      .slidecontainer input[type="range"]:hover::-webkit-slider-thumb {
+        background: #67e767;
+      }
+
+      .slidecontainer input[type="range"]:hover::-moz-range-thumb {
+        background: #67e767;
+      }
+
+      /* Output to display speed next to the slider */
+      .slidecontainer output {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slidecontainer">
+      <input
+        id="speedSlider"
+        value="1"
+        type="range"
+        min="0.5"
+        max="3"
+        step="0.1"
+      />
+      Speed: <span id="speedOutput">1</span>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
